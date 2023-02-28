@@ -8,7 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Basics.Es3();
+            BasicAlgorithm.Es1();
         }
     }
 }
