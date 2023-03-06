@@ -2,47 +2,34 @@
 {
     public class Persona {
 
-        public int results;
-        public int firstNumber;
-        public int secondNumber;
+        private int _number;
+        public const int N = 51;
+        public int result;
 
-        public int FirstNumber {
-            get {
-                return firstNumber;
-            }
-            set
-            {
-                firstNumber = value;
-            }
-        }
-
-        public int SecondNumber
-        {
+        public int Number { 
             get
-            {
-                return secondNumber;
-            }
-            set
-            {
-                secondNumber = value;
-            }
+            { 
+                return _number;
+            } 
+            set 
+            { 
+                _number = value;
+            } 
         }
 
-        public void Sum()
+        public void Check()
         {
-            if (this.firstNumber == this.secondNumber)
+            if(_number <= N)
             {
-                results = (this.firstNumber + this.secondNumber) * 3;
+                result = N - _number;
             }
             else
             {
-                results = this.firstNumber + this.secondNumber;
+                result = (_number - N) * 3;
             }
 
-            Console.WriteLine("La somma è " + results);
+            Console.WriteLine(result);
         }
 
-
-        public Persona() { }
     }
 }
