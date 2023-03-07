@@ -1,4 +1,4 @@
-﻿using Excerices;
+﻿using Excercices;
 
 using System;
 
@@ -8,7 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            BasicAlgorithm.Es1();
+            FunctionEx.Es9(5);
         }
     }
 }
