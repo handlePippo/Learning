@@ -8,29 +8,51 @@ namespace Excercices
 {
     public static class FunctionEx
     {
-        public static int Es9(int input)
+        public static void Es9()
         {
-            List<int> container = new List<int>();
-            int item;
+            try {
+                List<int> container = new List<int>();
+                Console.WriteLine("Inserisci un numero!");
+                string parseToInt = Console.ReadLine();
+                int parsedNumber = int.Parse(parseToInt);
 
-            for (int i = 1; i <= input; i++)
-            {
-                if (input % i == 0)
+                for (int i = 1; i <= parsedNumber; i++)
                 {
-                    container.Add(i);
+                    if (parsedNumber % i == 0)
+                    {
+                        container.Add(i);
+                    }
                 }
+
+                if (container.Count > 2)
+                {
+                    Console.WriteLine("Il numero inserito non è primo");
+                }
+                else
+                {
+                    Console.WriteLine("Il numero inserito è primo");
+                }
+
+            } catch (Exception ex) {
+
+                Console.Write("Carattere inserito non valido, riprova con un numero!");
+                Es9();
             }
 
-            if (container.Count > 2)
+        }
+
+        //////////////////////////////////////////////////////////////////////////////
+
+
+        public static int Es11(int input) {
+
+            for(int i = 1; i < input; i++)
             {
-                Console.WriteLine("Il numero inserito non è primo");
-            }
-            else
-            {
-                Console.WriteLine("Il numero inserito è primo");
+                
             }
 
             return input;
+
         }
     }
 }

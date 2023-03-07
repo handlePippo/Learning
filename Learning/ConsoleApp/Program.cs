@@ -8,7 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            FunctionEx.Es9(5);
+            FunctionEx.Es9();
         }
     }
 }
