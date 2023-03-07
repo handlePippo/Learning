@@ -44,15 +44,18 @@ namespace Excercices
         //////////////////////////////////////////////////////////////////////////////
 
 
-        public static int Es11(int input) {
+        public static void Es11() {
 
-            for(int i = 1; i < input; i++)
+            Console.WriteLine("Inserisci un numero!");
+            string number = Console.ReadLine();
+            int parsedNumber = int.Parse(number);
+            int flag = 1;
+
+            for (int i = 1; i < parsedNumber; i++)
             {
-                
+                flag = flag + flag * i;
             }
-
-            return input;
-
+            Console.Write($"Il fattoriale di {parsedNumber} è {flag}!");
         }
     }
 }
