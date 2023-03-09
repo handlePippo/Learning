@@ -39,7 +39,24 @@
                 Counter--;
             }
         }
-        public class Inspector 
+
+        // INSPECTOR 12.1
+        //public class Inspector 
+        //{
+        //    public void GetTickets(List<ITicket> tickets)
+        //    {
+
+        //        foreach (var el in tickets)
+        //        {
+        //            Console.WriteLine(tickets);
+        //        }
+        //    }            
+        //}
+
+
+
+        //INSPECTOR 12.2
+        public class Inspector
         {
             public void GetTickets(List<ITicket> tickets)
             {
@@ -48,7 +65,7 @@
                 {
                     Console.WriteLine(tickets);
                 }
-            }            
+            }
         }
         #endregion
 
