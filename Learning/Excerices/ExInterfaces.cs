@@ -2,6 +2,7 @@
 {
     public class ExInterfaces
     {
+        #region es12.1
         public interface ITicket
         {
             public void Stamp();
@@ -38,17 +39,39 @@
                 Counter--;
             }
         }
-
         public class Inspector 
         {
             public void GetTickets(List<ITicket> tickets)
             {
 
-                foreach (ITicket ticket in tickets)
+                foreach (var el in tickets)
                 {
-                    Console.WriteLine(ticket.ToString());
+                    Console.WriteLine(tickets);
                 }
             }            
         }
+        #endregion
+
+        #region es12.2
+
+        public class Person
+        {
+            public string Name { get;  set; }
+            public List<ITicket> Ticket { get;  set; }
+
+            public Person(string pName, List<ITicket> pTicket )
+            {
+                Name = pName;
+                Ticket = pTicket;
+            }
+        }
+
+        public class Bus
+        {
+            public int Number { get; private set; }
+            public List<Person> Travellers { get; private set; }
+        }
+
+        #endregion
     }
 }

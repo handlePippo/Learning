@@ -29,7 +29,8 @@ namespace ConsoleApp
             new ExInterfaces.TicketBooklet(),
             new ExInterfaces.TicketBooklet(),
             new ExInterfaces.TicketBooklet(),
-    };
+            new ExInterfaces.TicketBooklet(),
+        };
 
             inspector.GetTickets(tickets);
         }
