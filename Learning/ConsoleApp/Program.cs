@@ -1,6 +1,5 @@
 ﻿using Excercices;
-
-using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp
 {
@@ -8,7 +7,33 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            FunctionEx.Es11();
+            ExInterfaces.SingleTicket singleTicket = new ExInterfaces.SingleTicket();
+
+            ExInterfaces.TicketBooklet ticketBooklet = new ExInterfaces.TicketBooklet();
+
+            ExInterfaces.Inspector inspector = new ExInterfaces.Inspector();
+
+            singleTicket.Stamp();
+            singleTicket.Stamp();
+            singleTicket.Stamp();
+
+            ticketBooklet.Stamp();
+            ticketBooklet.Stamp();
+
+            List<ExInterfaces.ITicket> tickets = new List<ExInterfaces.ITicket>()
+        {
+            new ExInterfaces.SingleTicket(),
+            new ExInterfaces.SingleTicket(),
+            new ExInterfaces.SingleTicket(),
+            new ExInterfaces.TicketBooklet(),
+            new ExInterfaces.TicketBooklet(),
+            new ExInterfaces.TicketBooklet(),
+            new ExInterfaces.TicketBooklet(),
+    };
+
+            inspector.GetTickets(tickets);
         }
+
     }
+
 }
